@@ -1,5 +1,4 @@
 import React from "react";
-import navStyle from "../navbar/nav.scss";
 
 const NavContainer = () => {
   return (
