@@ -1,12 +1,14 @@
-.nav-container {
-  width: auto auto;
-  height: 6vw;
-  background-color: #d35187;
-  display: grid;
-  place-items: center;
-}
+@media screen and (max-width: 500px) {
+  .nav-container {
+    width: auto auto;
+    height: 6vw;
+    background-color: #d35187;
+    display: grid;
+    place-items: center;
+  }
 
-.shop-icon {
-  color: #ffffff;
-  font-size: 4vw;
+  .shop-icon {
+    color: #ffffff;
+    font-size: 4vw;
+  }
 }
