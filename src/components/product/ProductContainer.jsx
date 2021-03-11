@@ -1,5 +1,5 @@
 import React from "react";
-import productStyels from "../product/product.scss";
+import "../product/product.scss";
 
 function ProductContainer() {
   return (
