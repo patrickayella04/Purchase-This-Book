@@ -1,5 +1,9 @@
 import React from "react";
 
+
+import "../product/product.scss";
+
+
 function ProductContainer() {
   return (
     <div>
