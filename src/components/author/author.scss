@@ -1,0 +1,27 @@
+@media screen and (max-width: 500px) {
+  .author-card {
+    display: flex;
+    flex-direction: column;
+    margin: 5vw;
+    margin-bottom: 5vw;
+  }
+
+  .description-book,
+  .title-book,
+  .author,
+  .max {
+    margin-bottom: 5vw;
+  }
+  .description-book,
+  .max,
+  .title-book {
+    font-size: 2rem;
+  }
+  .pic-author {
+    height: 25vw;
+  }
+  .name-author,
+  .pic-author {
+    margin-left: 50vw;
+  }
+}

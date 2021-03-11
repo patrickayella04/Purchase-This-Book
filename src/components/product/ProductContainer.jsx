@@ -1,5 +1,8 @@
 import React from "react";
+
+
 import "../product/product.scss";
+
 
 function ProductContainer() {
   return (
@@ -8,10 +11,11 @@ function ProductContainer() {
         <div className="product-card">
           <div className="img"></div>
           <div className="description">
-            <p className="des-text">
-              This is an amaing book to reade. You should buy it for only £5!
-            </p>
+            <h3 className="des-text">
+              This is an amaing book to read. Now only only £5!
+            </h3>
           </div>
+
           <button className="purchase">PAY NOW</button>
         </div>
       </div>
