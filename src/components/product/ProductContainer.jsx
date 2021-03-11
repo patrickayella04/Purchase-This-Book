@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 function ProductContainer() {
   return (
@@ -13,9 +12,7 @@ function ProductContainer() {
             </h3>
           </div>
 
-          <NavLink to="/purchased" className="purchased">
-            PAY NOW
-          </NavLink>
+          <button className="purchase">PAY NOW</button>
         </div>
       </div>
     </div>
