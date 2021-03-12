@@ -6,6 +6,10 @@ import StripeContainer from "../StripeContainer";
 import Nav from "../navbar/NavContainer";
 import Footer from "../footer/Footer";
 
+
+import "../product/product.scss";
+
+
 function ProductContainer() {
   const [purchased, setPurchased] = useState(true);
 
