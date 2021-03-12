@@ -1,20 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import Purchased from "../purchased/Purchased";
+import Author from "../author/Author";
+import NavContainer from "../navbar/NavContainer";
+import StripeContainer from "../StripeContainer";
+import Nav from "../navbar/NavContainer";
+import Footer from "../footer/Footer";
 
 function ProductContainer() {
+  const [purchased, setPurchased] = useState(true);
+
   return (
     <div>
-      <div className="product-container">
-        <div className="product-card">
-          <div className="img"></div>
-          <div className="description">
-            <h3 className="des-text">
-              This is an amaing book to read. Now only only £5!
-            </h3>
-          </div>
+      {purchased ? (
+        <>
+          <Nav />
+          <Author />
+          <div className="product-container">
+            <div className="product-card">
+              <div className="img"></div>
+              <div className="description">
+                <h3 className="des-text">
+                  This is an amazing book to read. Now only only £10!
+                </h3>
+              </div>
 
-          <button className="purchase">PAY NOW</button>
-        </div>
-      </div>
+              <button onClick={() => setPurchased(false)} className="purchase">
+                PAY NOW
+              </button>
+            </div>
+          </div>
+          <Footer />
+        </>
+      ) : (
+        <>
+          <Nav />
+
+          <StripeContainer />
+        </>
+      )}
     </div>
   );
 }
