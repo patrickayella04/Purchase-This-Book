@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 import Purchased from "./purchased/Purchased";
-import NavContainer from "./navbar/NavContainer";
+//import NavContainer from "./navbar/NavContainer";
 
 import "./paymentForm.scss";
 
