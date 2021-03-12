@@ -70,7 +70,7 @@ function PaymentForm() {
                 <CardElement options={CARD_OPTIONS} />
               </div>
             </fieldset>
-            <button onClick={handleSubmit} className="formButton">
+            <button type="submit" onClick={handleSubmit} className="formButton">
               Pay
             </button>
           </form>
