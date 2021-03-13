@@ -71,8 +71,8 @@ function PaymentForm() {
               </div>
             </fieldset>
             <button
+              onTouchStart={handleSubmit}
               type="submit"
-              onClick={() => handleSubmit}
               className="formButton"
             >
               Pay

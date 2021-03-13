@@ -5,6 +5,8 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST);
 const bodyParser = require("body-parser");
 const cors = require("cors");
 
+const path = require("path");
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -33,6 +35,16 @@ app.post("/payment", cors(), async (req, res) => {
     });
   }
 });
+
+// Serve static assets in production
+if (process.env.NODE_ENV === "production") {
+  // Set static folder
+  app.use(express.static("PURCHASE-THIS-BOOK/build"));
+
+  //app.get("*", (req, res) =>
+  //res.sendFile(path.resolve(__dirname, "build", "index.html"))
+  //);
+}
 
 app.listen(process.env.PORT || 4000, () => {
   console.log("Server is listening on port 4000");
