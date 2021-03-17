@@ -41,7 +41,11 @@ function PaymentForm() {
     if (!error) {
       try {
         const { id } = paymentMethod;
-        const response = await axios.post("http://localhost:4000/payment", {
+        // const response = await axios.post("http://localhost:4000/payment", {
+        //   amount: 1000,
+        //   id,
+        // });
+        const response = await axios.post("./netlify/functions/payment", {
           amount: 1000,
           id,
         });

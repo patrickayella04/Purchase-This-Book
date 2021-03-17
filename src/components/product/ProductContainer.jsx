@@ -1,14 +1,10 @@
 import React, { useState } from "react";
-import Purchased from "../purchased/Purchased";
 import Author from "../author/Author";
-import NavContainer from "../navbar/NavContainer";
 import StripeContainer from "../StripeContainer";
 import Nav from "../navbar/NavContainer";
 import Footer from "../footer/Footer";
 
-
 import "../product/product.scss";
-
 
 function ProductContainer() {
   const [purchased, setPurchased] = useState(true);
