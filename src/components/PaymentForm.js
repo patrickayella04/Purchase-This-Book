@@ -41,7 +41,11 @@ function PaymentForm() {
     if (!error) {
       try {
         const { id } = paymentMethod;
-        const response = await axios.post("http://localhost:4000/payment", {
+        // const response = await axios.post("http://localhost:4000/payment", {
+        //   amount: 1000,
+        //   id,
+        // });
+        const response = await axios.post("./netlify/functions/payment", {
           amount: 1000,
           id,
         });
@@ -70,7 +74,13 @@ function PaymentForm() {
                 <CardElement options={CARD_OPTIONS} />
               </div>
             </fieldset>
-            <button className="formButton">Pay</button>
+            <button
+              onTouchStart={handleSubmit}
+              type="submit"
+              className="formButton"
+            >
+              Pay
+            </button>
           </form>
         </>
       ) : (
