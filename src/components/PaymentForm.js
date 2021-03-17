@@ -46,7 +46,7 @@ function PaymentForm() {
         //   amount: 1000,
         //   id,
         // });
-        const response = await axios.post("./netlify/functions/payment", {
+        const response = await axios.post("./netlify/functions/postPayment", {
           amount: 1000,
           id,
         });
