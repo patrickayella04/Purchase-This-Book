@@ -1,3 +1,16 @@
+.nav-container {
+  width: auto auto;
+  height: 4vw;
+  background-color: #d35187;
+  display: grid;
+  place-items: center;
+}
+
+.shop-icon {
+  color: #ffffff;
+  font-size: 3vw;
+}
+
 @media screen and (max-width: 500px) {
   .nav-container {
     width: auto auto;
