@@ -1,3 +1,29 @@
+.author-card {
+  display: flex;
+  flex-direction: row;
+  margin: 2vw;
+  margin: 5vw 15vw 20vw 15vw;
+}
+
+.description-book,
+.title-book,
+.author,
+.max {
+  margin-bottom: 2vw;
+}
+.description-book,
+.max,
+.title-book {
+  font-size: 2rem;
+}
+.pic-author {
+  height: 20vw;
+}
+.name-author,
+.pic-author {
+  margin-left: 5vw;
+}
+
 @media screen and (max-width: 500px) {
   .author-card {
     display: flex;

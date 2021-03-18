@@ -1,3 +1,16 @@
+.footer-container {
+  width: auto auto;
+  height: 4vw;
+  background-color: #d35187;
+  display: grid;
+  place-items: center;
+}
+
+.footer-icon {
+  color: #ffffff;
+  font-size: 3vw;
+}
+
 @media screen and (max-width: 500px) {
   .footer-container {
     width: auto auto;
