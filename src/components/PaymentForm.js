@@ -66,8 +66,14 @@ function PaymentForm() {
       {!success ? (
         <>
           <h2 className="transations-text">
-            Please Enter Card Details to complete transaction of - Total: £10
+            Please pick a date for pick up and Enter Card Details to complete
+            transaction of - Total: £10
           </h2>
+
+          {/* <form action="">
+            <input type="date" name="" id="" />
+            <input type="submit" />
+          </form> */}
 
           <form onSubmit={handleSubmit}>
             <fieldset className="FormGroup">
