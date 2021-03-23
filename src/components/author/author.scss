@@ -11,11 +11,14 @@
 .max {
   margin-bottom: 2vw;
 }
-.description-book,
 .max,
 .title-book {
   font-size: 2rem;
 }
+.description-book {
+  font-size: 1.8rem;
+}
+
 .pic-author {
   height: 20vw;
 }
@@ -44,10 +47,10 @@
     font-size: 2rem;
   }
   .pic-author {
-    height: 25vw;
+    height: 60vw;
   }
   .name-author,
   .pic-author {
-    margin-left: 50vw;
+    margin-left: 0vw;
   }
 }

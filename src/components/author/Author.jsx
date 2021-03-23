@@ -6,9 +6,12 @@ const Author = () => {
     <div>
       <div className="author-card">
         <div className="author-text-container">
-          <h1 className="title-book">The Passion Within</h1>
-          <h2 className="author">Author: </h2>
-          <h3 className="max">Maxwell Jefferson</h3>
+          <h5 className="max">Maxwell Jefferson</h5>
+          <h1 className="title-book">
+            <i>The Passion Within</i>
+          </h1>
+          <h2 className="author"> </h2>
+
           <p className="description-book">
             The Passion Within, written by Maxwell Jefferson, is a master piece
             in its own right being one of the citites top selling books.

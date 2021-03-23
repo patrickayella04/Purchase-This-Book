@@ -28,46 +28,91 @@ const CARD_OPTIONS = {
 
 function PaymentForm() {
   const [success, setSuccess] = useState(false);
+  const [date, setDate] = useState("");
+  const [selected, setSelected] = useState(true);
+
   const stripe = useStripe();
   const elements = useElements();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: "card",
-      card: elements.getElement(CardElement),
-    });
+    // Default code will allow for dummy card details to be entered and submited to simulate a payment
+    // completion.
 
-    if (!error) {
-      try {
-        const { id } = paymentMethod;
-        const response = await axios.post("http://localhost:4000/payment", {
-          amount: 1000,
-          id,
-        });
-        // const response = await axios.post("./netlify/functions/postPayment", {
-        //   amount: 1000,
-        //   id,
-        // });
-        if (response.data.success) {
-          console.log("Successful payment");
-          setSuccess(true);
-        }
-      } catch (error) {
-        console.log("Error", error);
-      }
+    if (selected === false) {
+      setSuccess(true);
     } else {
-      console.log(error.message);
+      alert("Please SUBMIT a date!");
     }
+
+    // Connection to Stripe works with below code using local sever. Future goal will be to connect stripe to
+    // serverless connection for a production product, so payments can be made remotely.
+
+    // const { error, paymentMethod } = await stripe.createPaymentMethod({
+    //   type: "card",
+    //   card: elements.getElement(CardElement),
+    // });
+
+    // if (!error) {
+    //   try {
+    //     const { id } = paymentMethod;
+    //     const response = await axios.post("http://localhost:4000/payment", {
+    //       amount: 1000,
+    //       id,
+    //     });
+    //     // const response = await axios.post("./netlify/functions/postPayment", {
+    //     //   amount: 1000,
+    //     //   id,
+    //     // });
+    //     if (response.data.success) {
+    //       console.log("Successful payment");
+    //       setSuccess(true);
+    //     }
+    //   } catch (error) {
+    //     console.log("Error", error);
+    //   }
+    // } else {
+    //   console.log(error.message);
+    // }
+  };
+  const dateSubmit = (e) => {
+    e.preventDefault();
+
+    setSelected(!selected);
+
+    const dateValue = document.getElementById("dateValue").value;
+
+    const newDate = dateValue;
+
+    setDate(newDate);
+
+    console.log(date);
   };
   return (
     <>
       {!success ? (
         <>
           <h2 className="transations-text">
-            Please Enter Card Details to complete transaction of - Total: £10
+            Please submit a date for pick up and Enter Card Details to complete
+            transaction of - Total: £10
           </h2>
+          <div className="date-container">
+            <form className="order-date-form" action="submit">
+              <input
+                className="date-input"
+                type="date"
+                name=""
+                id="dateValue"
+              />
+              <input
+                className="submit-date"
+                onClick={dateSubmit}
+                type="submit"
+                style={{ backgroundColor: !selected ? "green" : "#d35187" }}
+              />
+            </form>
+          </div>
 
           <form onSubmit={handleSubmit}>
             <fieldset className="FormGroup">
@@ -86,7 +131,7 @@ function PaymentForm() {
         </>
       ) : (
         <div>
-          <Purchased />
+          <Purchased date={date} />
         </div>
       )}
     </>

@@ -1,6 +1,6 @@
 .FormGroup {
   margin: 0 35vw;
-  padding: 0;
+  // padding: 0;
   border-style: none;
   //background-color: #7795f8;
   background-color: #d35187;
@@ -9,10 +9,13 @@
     inset 0 1px 0#d35187;
   border-radius: 4px;
   margin-top: 10vw;
+  padding: 6px;
 }
 .transations-text {
   // margin: 20vw 5vw 0 5vw;
-  margin: 10vw 38vw;
+  margin: 10vw 30vw;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .FormRow {
@@ -41,11 +44,23 @@
   will-change: transform, background-color, box-shadow;
   border: none;
 }
+.date-container {
+  display: grid;
+  place-items: center;
+}
+.date-input {
+  padding: 0.5vw;
+  border: 2px solid #d35187;
+}
+.submit-date {
+  padding: 0.6vw;
+  margin-left: 1vw;
+}
 
 @media screen and (max-width: 970px) {
   .FormGroup {
     margin: 0 15px 20px;
-    padding: 0;
+    // padding: 0;
     border-style: none;
     //background-color: #7795f8;
     background-color: #d35187;
@@ -54,6 +69,7 @@
       inset 0 1px 0#d35187;
     border-radius: 4px;
     margin-top: 10vw;
+    padding: 6px;
   }
 
   .FormRow {
@@ -81,4 +97,19 @@
     will-change: transform, background-color, box-shadow;
     border: none;
   }
+  .transations-text {
+    // margin: 20vw 5vw 0 5vw;
+    margin: 10vw 8vw;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  // .order-date-form {
+  //   margin: 0 43vw;
+  // }
+  // .submit-date {
+  //   margin: 0 20vw;
+  // }
 }

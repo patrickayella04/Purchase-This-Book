@@ -13,9 +13,13 @@
 }
 .img {
   background-image: url(./693D3030-2C43-4C62-9F0F-E9EDC55DFF2E_4_5005_c.jpeg);
-  background-repeat: none;
-  background-size: 25%;
-  height: 25vw;
+  background-repeat: no-repeat;
+  // background-size: 18vw;
+  // height: 25vw;
+  // margin-left: 15vw;
+  background-size: 34vw;
+  height: 54vw;
+  margin-left: 7vw;
 }
 .description {
   margin: auto;
@@ -27,11 +31,12 @@
   margin-top: 5vw;
   margin-bottom: 5vw;
   padding: 1vw;
+  font-size: 1.6rem;
 }
 
 @media screen and (max-width: 500px) {
   .product-container {
-    background-color: #b35757;
+    // background-color: #b35757;
     margin: 5vw;
     //   height: 100vw;
     display: grid;
@@ -48,11 +53,11 @@
     background-repeat: none;
     background-size: 95%;
     height: 100vw;
-    margin: 5vw;
+    // margin: 5vw;
   }
   .description {
     margin: auto;
-    font-size: 3vw;
+    font-size: 3.2vw;
   }
   .transations-text {
     margin: 20vw 5vw 0 5vw;
@@ -62,6 +67,7 @@
     margin-top: 5vw;
     margin-bottom: 5vw;
     padding: 1vw;
+    font-size: 1.6rem;
   }
   // .des-text {
   //   margin: 5vw;
