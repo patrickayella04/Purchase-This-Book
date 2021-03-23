@@ -7,7 +7,9 @@ const Author = () => {
       <div className="author-card">
         <div className="author-text-container">
           <h5 className="max">Maxwell Jefferson</h5>
-          <h1 className="title-book">The Passion Within</h1>
+          <h1 className="title-book">
+            <i>The Passion Within</i>
+          </h1>
           <h2 className="author"> </h2>
 
           <p className="description-book">

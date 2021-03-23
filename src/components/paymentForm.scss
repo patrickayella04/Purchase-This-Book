@@ -44,6 +44,18 @@
   will-change: transform, background-color, box-shadow;
   border: none;
 }
+.date-container {
+  display: grid;
+  place-items: center;
+}
+.date-input {
+  padding: 0.5vw;
+  border: 2px solid #d35187;
+}
+.submit-date {
+  padding: 0.6vw;
+  margin-left: 1vw;
+}
 
 @media screen and (max-width: 970px) {
   .FormGroup {
@@ -91,4 +103,13 @@
     font-size: 2rem;
     text-align: center;
   }
+}
+
+@media screen and (max-width: 480px) {
+  // .order-date-form {
+  //   margin: 0 43vw;
+  // }
+  // .submit-date {
+  //   margin: 0 20vw;
+  // }
 }
