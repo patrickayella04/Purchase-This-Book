@@ -93,9 +93,8 @@ function PaymentForm() {
     <>
       {!success ? (
         <>
-          <h2 className="transations-text">
-            Please submit a date for pick up and Enter Card Details to complete
-            transaction of - Total: £10
+          <h2 className="transaction-text">
+            Enter Card Details &amp; Collection Date - Total: £10
           </h2>
           <div className="date-container">
             <form className="order-date-form" action="submit">
@@ -118,10 +117,9 @@ function PaymentForm() {
             <fieldset className="FormGroup">
               <div className="FormRow">
                 <CardElement options={CARD_OPTIONS} />
-
-                <p className="card-disclaimer">card number: repeat 42 </p>
               </div>
             </fieldset>
+            <p className="card-disclaimer">card number: repeat 42 </p>
             <button
               onTouchStart={handleSubmit}
               type="submit"

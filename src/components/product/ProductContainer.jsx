@@ -13,24 +13,31 @@ function ProductContainer() {
     <div>
       {purchased ? (
         <>
-          <Nav />
-          <Author />
-          <div className="product-container">
-            <div className="product-card">
-              {/* <div className="img"></div> */}
-              <div className="description">
-                <div className="img"></div>
-                <h3 className="des-text">
-                  This is an amazing book to read. Now only £10!
-                </h3>
-              </div>
+          <div className="background-color">
+            <Nav />
 
-              <button onClick={() => setPurchased(false)} className="purchase">
-                BUY NOW
-              </button>
+            <Author />
+            <div className="product-container">
+              <div className="product-card">
+                {/* <div className="img"></div> */}
+                <div className="description">
+                  <div className="img"></div>
+                  <h3 className="des-text">
+                    This is an amazing book to read. Now only £10!
+                  </h3>
+                </div>
+
+                <button
+                  onClick={() => setPurchased(false)}
+                  className="purchase"
+                >
+                  BUY NOW
+                </button>
+              </div>
             </div>
+
+            <Footer />
           </div>
-          <Footer />
         </>
       ) : (
         <>
