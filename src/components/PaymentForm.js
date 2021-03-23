@@ -118,6 +118,8 @@ function PaymentForm() {
             <fieldset className="FormGroup">
               <div className="FormRow">
                 <CardElement options={CARD_OPTIONS} />
+
+                <p className="card-disclaimer">card number: repeat 42 </p>
               </div>
             </fieldset>
             <button
