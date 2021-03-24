@@ -22,10 +22,10 @@ function ProductContainer() {
                 {/* <div className="img"></div> */}
                 <div className="description">
                   <div className="img"></div>
-                  <h3 className="des-text">
-                    This is an amazing book to read. Now only £10!
-                  </h3>
                 </div>
+                <h3 className="des-text">
+                  This is an amazing book to read. Now only £10!
+                </h3>
 
                 <button
                   onClick={() => setPurchased(false)}
