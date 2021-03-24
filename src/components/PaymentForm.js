@@ -3,6 +3,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import axios from "axios";
 import Purchased from "./purchased/Purchased";
 //import NavContainer from "./navbar/NavContainer";
+import Footer from "./footer/Footer";
 
 import "./paymentForm.scss";
 
@@ -92,7 +93,7 @@ function PaymentForm() {
   return (
     <>
       {!success ? (
-        <>
+        <div className="form-background">
           <h2 className="transaction-text">
             Enter Card Details &amp; Collection Date - Total: £10
           </h2>
@@ -128,7 +129,8 @@ function PaymentForm() {
               Pay
             </button>
           </form>
-        </>
+          {/* <Footer /> */}
+        </div>
       ) : (
         <div>
           <Purchased date={date} />

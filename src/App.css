@@ -6,4 +6,5 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 1 rem is now 10 pixles */
+  background-color: #d4c7c7;
 }

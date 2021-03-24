@@ -4,6 +4,7 @@ import "../navbar/nav.scss";
 import "../author/author.scss";
 import "../footer/footer.scss";
 import "../purchased/purchased.scss";
+import "./home.scss";
 
 import Product from "../product/ProductContainer";
 

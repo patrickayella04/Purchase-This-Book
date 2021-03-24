@@ -16,7 +16,7 @@
   font-size: 4rem;
 }
 .description-book {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .pic-author {
@@ -28,6 +28,9 @@
 }
 
 @media screen and (max-width: 500px) {
+  //  {
+  //   background-color: #d4c7c7;
+  // }
   .author-card {
     display: flex;
     flex-direction: column;
