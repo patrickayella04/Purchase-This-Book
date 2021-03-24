@@ -42,8 +42,17 @@
 .background-color {
   background-color: #d4c7c7;
 }
+.des-text {
+  display: none;
+}
 
 @media screen and (max-width: 500px) {
+  .desktop-text {
+    display: none;
+  }
+  .des-text {
+    display: block;
+  }
   .background-color {
     background-color: #d4c7c7;
   }
