@@ -105,13 +105,21 @@ function PaymentForm() {
                 name=""
                 id="dateValue"
               />
-              <input
+              <button
                 className="submit-date"
                 onClick={dateSubmit}
                 type="submit"
                 style={{ backgroundColor: !selected ? "green" : "#d35187" }}
-              />
+              >
+                Submit
+              </button>
             </form>
+            {/* <button
+                className="submit-date"
+                onClick={dateSubmit}
+                type="submit"
+                style={{ backgroundColor: !selected ? "green" : "#d35187" }}
+              > </button> */}
           </div>
 
           <form onSubmit={handleSubmit}>
