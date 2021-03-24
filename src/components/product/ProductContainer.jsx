@@ -31,7 +31,7 @@ function ProductContainer() {
                   onClick={() => setPurchased(false)}
                   className="purchase"
                 >
-                  BUY NOW
+                  Buy Now
                 </button>
               </div>
             </div>
